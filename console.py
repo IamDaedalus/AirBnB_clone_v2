@@ -22,7 +22,7 @@ class HBNBCommand(cmd.Cmd):
                'BaseModel': BaseModel, 'User': User, 'Place': Place,
                'State': State, 'City': City, 'Amenity': Amenity,
                'Review': Review
-              }
+    }
     dot_cmds = ['all', 'count', 'show', 'destroy', 'update']
     types = {
              'number_rooms': int, 'number_bathrooms': int,
@@ -137,9 +137,10 @@ class HBNBCommand(cmd.Cmd):
                 value = value[1:-1].replace('_', ' ')
             # handle digits as int and value with dot as float
             if '.' in value:
-                value = float(value)
-                print(value)
-                print(type(value))
+                try:
+                    value = float(value)
+                except ValueError:
+                    pass
             else:
                 try:
                     value = int(value)
@@ -304,7 +305,7 @@ class HBNBCommand(cmd.Cmd):
             args = args.partition(' ')
 
             # if att_name was not quoted arg
-            if not att_name and args[0] !=  ' ':
+            if not att_name and args[0] != ' ':
                 att_name = args[0]
             # check for quoted val arg
             if args[2] and args[2][0] == '\"':
@@ -343,6 +344,7 @@ class HBNBCommand(cmd.Cmd):
         """ Help information for the update class """
         print("Updates an object with new information")
         print("Usage: update <className> <id> <attName> <attVal>\n")
+
 
 if __name__ == "__main__":
     HBNBCommand().cmdloop()
