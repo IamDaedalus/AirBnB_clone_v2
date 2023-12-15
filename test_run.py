@@ -1,16 +1,9 @@
 
 #!/usr/bin/python3
+l = 'gg'
 
-class Me:
-    my_att = "Elgibbor"
+h = ['gg', 88, 9]
 
-    def __init__(self, obj_att):
-        self.obj_att = obj_att
+o = h[l]
 
-m = Me('lll')
-print(m.obj_att)
-jj = Me('kk')
-jj.jj_name = "jj_here"
-print(jj.jj_name)
-print(dir(m))
-
+print(o)
