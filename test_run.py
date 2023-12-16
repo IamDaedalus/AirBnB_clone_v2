@@ -1,9 +1,9 @@
 
 #!/usr/bin/python3
-l = 'gg'
+class men:
+    def __init__(self) -> None:
+        pass
 
-h = ['gg', 88, 9]
-
-o = h[l]
-
-print(o)
+n = men()
+print(f'{n.__class__.__name__}')
+print(f'{type(n).__name__}')
