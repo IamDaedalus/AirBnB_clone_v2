@@ -42,7 +42,7 @@ class DBstorage:
 
         db_url = f"mysql+mysqldb://{user}:{paswd}@{host}/{db}"
 
-        __engine = create_engine(db_url, pool_pre_ping=True)
+        self.__engine = create_engine(db_url, pool_pre_ping=True)
         if environ['HBNB_ENV'] == "test":
             Base.metadata.drop_all(__engine)
 
