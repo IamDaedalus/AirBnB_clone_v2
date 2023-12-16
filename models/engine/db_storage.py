@@ -31,7 +31,7 @@ class DBstorage:
     def __init__(self):
         """
         Initialize the DBStorage instance.
-
+        -----------------------------------
         Sets up the SQLAlchemy engine & session based on environment variables.
         Drops all tables if environment variable HBNB_ENV is equal to 'test'.
         """
