@@ -15,8 +15,8 @@ from sqlalchemy.ext.declarative import declarative_base
 
 # maps class names to corresponding model classes
 all_clss = {
-    'User': User,
     'BaseModel': BaseModel,
+    'User': User, 'City': City,
     'State': State, 'Place': Place,
     'Amenity': Amenity, 'Review': Review
     }
