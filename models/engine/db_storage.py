@@ -80,7 +80,7 @@ class DBstorage:
         """Delete an object from the current database session."""
         if obj:
             self.__session.delete(obj)
-
+ 
     def reload(self):
         """Reload the database setup and create a new session."""
         engine = Base.metadata.create_all(self.__engine)
